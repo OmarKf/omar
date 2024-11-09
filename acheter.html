@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire d'Achat</title>
+<style>
+  .error {
+    color: red;
+  }
+  body{
+    background-color: blue;
+    justify-content: center;
+   
+  }
+  form{
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border border-radius: 5px;
+    height: 400px;
+    width: 500px;
+
+  }
+  button{
+    background-color: white ;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+  }
+
+  }
+</style>
+</head>
+<body>
+
+<h2>Formulaire d'Achat</h2>
+
+<form id="purchaseForm" onsubmit="return validateForm()">
+  <label for="name">Nom:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="address">Adresse de Livraison:</label><br>
+  <textarea id="address" name="address" required></textarea><br>
+  <label for="quantity">Quantité:</label><br>
+  <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+  <button type="submit">Acheter</button>
+</form>
+
+<p id="errorMessage" class="error" style="display: none;">Veuillez remplir tous les champs.</p>
+
+<script>
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var address = document.getElementById("address").value;
+  var quantity = document.getElementById("quantity").value;
+  var errorMessage = document.getElementById("errorMessage");
+
+  if (name === "" || email === "" || address === "" || quantity === "") {
+    errorMessage.style.display = "block";
+    return false;
+  }
+
+  // Validation supplémentaire pour la quantité
+  if (quantity <= 0) {
+    errorMessage.innerText = "La quantité doit être supérieure à zéro.";
+    errorMessage.style.display = "block";
+    return false;
+  }
+
+  // Vous pouvez ajouter d'autres validations ici si nécessaire
+
+  return true;
+}
+</script>
+
+</body>
+</html>

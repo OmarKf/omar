@@ -1,0 +1,56 @@
+
+header{
+    background-color: blue;
+    height: 100px;
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+    div{
+        margin-top: 3px;
+        height: 400px;
+        width: 100%;
+        background-color: white;
+        
+        
+    }
+
+header button{
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    margin-left: 9px;
+    margin-top: 25px;
+    text-decoration-color: blue;background-color: white;
+    
+    border-radius: 5px ;
+    border: 2px solid blue;
+}
+header img{
+    float: right;
+    height: 100px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+#n{
+    width: 300px;
+    height: 300px;
+}
+div img{
+    height: 200px;
+    width: 250px;
+}
+#a{
+    background-color: blue;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    text-decoration: white;
+}
+a {
+    text-decoration: none;
+}

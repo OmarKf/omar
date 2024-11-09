@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion</title>
+<style>
+      body{
+    background-color: blue;
+    justify-content: center;
+   
+  }
+  form{
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border border-radius: 5px;
+    height: 400px;
+    width: 500px;
+
+  }
+  button{
+    background-color: white ;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Connexion</h2>
+
+<form id="loginForm" onsubmit="return validateForm()">
+  <label for="username">Nom d'utilisateur:</label><br>
+  <input type="text" id="username" name="username" required><br>
+  <label for="password">Mot de passe:</label><br>
+  <input type="password" id="password" name="password" required><br><br>
+  <button type="submit">Se Connecter</button>
+</form>
+
+<p id="errorMessage" style="color: red; display: none;">Veuillez remplir tous les champs.</p>
+
+<script>
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var errorMessage = document.getElementById("errorMessage");
+
+  if (username === "" || password === "") {
+    errorMessage.style.display = "block";
+    return false;
+  }
+
+  // Vous pouvez ajouter une logique de vérification supplémentaire ici si nécessaire
+
+  return true;
+}
+</script>
+
+</body>
+</html>
